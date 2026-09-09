@@ -1,0 +1,7 @@
+config.php
+leads.jsonl
+.rate/
+.DS_Store
+Thumbs.db
+*.log
+
