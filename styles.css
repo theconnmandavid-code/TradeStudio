@@ -105,6 +105,10 @@ nav a:hover { color: var(--ink); }
   align-items: center;
   padding: 64px 0 72px;
 }
+.hero.solo {
+  grid-template-columns: minmax(0, 38rem);
+  padding-bottom: 24px;
+}
 .kicker {
   font-size: 0.78rem;
   letter-spacing: 0.2em;
@@ -368,7 +372,8 @@ input, select, textarea {
   font: inherit;
 }
 textarea { min-height: 110px; resize: vertical; }
-.note { font-size: 0.85rem; color: #c9c2b6; margin-top: 12px; }
+.note { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+.contact .note { color: #c9c2b6; }
 .hp {
   position: absolute;
   left: -9999px;

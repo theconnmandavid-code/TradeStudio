@@ -62,9 +62,12 @@ form?.addEventListener("submit", async (e) => {
       throw new Error(data.error || "Something broke on our end. Please call instead.");
     }
 
-    // Only now is it honest to say we have it.
+    // Only now is it honest to say we have it. Show the confirmation inline
+    // first so there's no blank beat, then hand them the page that explains
+    // what happens next.
     form.hidden = true;
-    setStatus("Got it. We’ll call you back.", "is-ok");
+    setStatus("Got it. Taking you to what happens next…", "is-ok");
+    window.location.assign("thanks.html");
   } catch (err) {
     setStatus(err.message || "Couldn’t send that. Please call instead.", "is-bad");
     restore();
